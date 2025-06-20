@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/*
+Theme Name: thème-33w-été25
+Theme URI: https://referenced.ca
+Author: Eddy Martin
+Author URI: https://github.com/eddytuto
+Description: Thème de base développer dans le cadre du cours de Worpress
+Version: 1.0
+Tested up to: 6.2
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: club-voyage
+*/
+/* Importation des  feuilles de style du thème */
+/* variables */
+/* Base */
+/* Layout */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  border: 1px solid #ccc;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+.global {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ///////////////////////////// Layout .entete */
+.entete {
+  background-color: rgb(245, 243, 241);
+  /*  /////////////////////// Navigation */
+}
+.entete__contenu {
+  display: flex;
+  justify-content: space-between;
+}
+.entete__logo {
+  width: 80px;
+  height: 80px;
+}
+.entete__nav {
+  margin: 0 2rem 0 auto;
+
+}
+.entete__menu {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+
+}
+.entete__menu-item a {
+  display: block;
+  background-color: beige;
+}
+.entete__menu-item a:hover {
+  background-color: rgb(233, 227, 177);
+}
+
+.hero {
+  background-image: url("images/acores.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+
+.hero {
+
+  padding: 4rem 2rem;
+  text-align: center;
+
+
+  &__contenu {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__titre {
+    font-size: 1.5rem;
+   margin-bottom: 1rem;
+  }
+
+  &__texte {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  &__coordonnees {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__bouton {
+    
+    color: rgb(14, 13, 13);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #e64a19;
+    }
+  }
+}
+/* ////////////////////////////////  composants */
+/**
+/////////////////////////////// Compsant .recherche
+*/
+.recherche {
+  border: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+}
+.recherche__input {
+  border: none;
+  outline: none;
+}
+.recherche__bouton {
+  border-left: 1px solid #aaa;
+}/*# sourceMappingURL=style.css.map */
+
