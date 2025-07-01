@@ -1,50 +1,57 @@
-<footer class="pieddepage">
+ <footer class="pieddepage">
   <div class="pieddepage__contenu">
-
-    <!-- Menu externe -->
-    <section class="pieddepage__logo">
-      <div class="pieddepage__lien">
-        <?php
-          wp_nav_menu(array(
-            'menu'     => 'externe', 
-            'container'=> 'nav',
-            'menu_class' => 'pieddepage__liste'
-          ));
-        ?>
-      </div>
-
-      <!-- Adresse + recherche -->
-      <div class="pieddepage__adresse">
-        <h2>Adresse et recherche</h2>
-        <p>123, rue des Voyages<br>Montréal (QC) H1A 2B3</p>
-        <?php get_search_form(); ?>
-      </div>
-
-      <!-- Description optionnelle -->
-      <div class="pieddepage__description">
-        <p>Fait avec ❤️ au Collège Maisonneuve</p>
-      </div>
+    
+    <!-- Logo -->
+     <section class="logo">
+      <div class="pieddepage__logo">
+      <img src="images/logo.png" alt="Logo Club Voyage" />
+    </div>
     </section>
+    
 
-    <!-- Ligne avec icônes -->
-    <section class="pieddepage__ligne-2">
-      <div class="pieddepage__icone">
-        <a href="#" aria-label="Facebook">
-          <img src="<?= get_template_directory_uri(); ?>/images/facebook.png" alt="Facebook" />
-        </a>
-        <a href="#" aria-label="Instagram">
-          <img src="<?= get_template_directory_uri(); ?>/images/insta.png" alt="Instagram" />
-        </a>
-        <a href="#" aria-label="Twitter">
-          <img src="<?= get_template_directory_uri(); ?>/images/tweete.png" alt="Twitter" />
-        </a>
+    <!-- Menu -->
+     <section class="menu">
+      <nav class="pieddepage__menu">
+      <ul class="pieddepage__liste">
+      
+        <li class="entete__item"><a href="#" class="entete__lien">Aventure</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Culturel</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Zen</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Sport</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Croisieres</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Repos</a></li>
+     
+      </ul>
+    </nav>
+     </section>
+    
+
+    <!-- Réseaux sociaux -->
+     <section class="reseaux">
+        <div class="pieddepage__reseaux">
+      <a href="#" aria-label="Facebook">
+        <img src="images/facebook.png" alt="Facebook" />
+      </a>
+      <a href="#" aria-label="Instagram">
+        <img src="images/insta.png" alt="Instagram" />
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="images/tweete.png" alt="Twitter" />
+      </a>
       </div>
-    </section>
+     </section>
+    
 
+    <!-- Informations -->
+    <section class="infos">
+      <div class="pieddepage__infos">
+      <p>&copy; <?php echo date('Y'); ?> Club Voyage. Tous droits réservés.</p>
+    
+    </div>
+
+    </section>
   </div>
 </footer>
-
-
 <?php wp_footer(); ?>
 </body>
 </html>

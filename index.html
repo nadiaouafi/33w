@@ -19,11 +19,13 @@
         <img src="images/logo.png" alt="" >
     </div>
     <nav class="entete__nav">
-      <ul class="entete__menu">
-        <li class="entete__item"><a href="#" class="entete__lien">Accueil</a></li>
-        <li class="entete__item"><a href="#" class="entete__lien">Destinations</a></li>
-        <li class="entete__item"><a href="#" class="entete__lien">Offres</a></li>
-        <li class="entete__item"><a href="#" class="entete__lien">Contact</a></li>
+     <ul class="entete__menu">
+        <li class="entete__item"><a href="#" class="entete__lien">Aventure</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Culturel</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Zen</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Sport</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Croisieres</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Repos</a></li>
       </ul>
     </nav>
     <form class="recherche" action="">
@@ -63,8 +65,29 @@
     <button class="formulaire-inscription__bouton">S'INSCRIRE</button>
   </section>
 
+  <section class="populaires">
+  <h2>Destinations populaires</h2>
+  <div class="grille-destinations">
+    <article class="destination">
+      <img src="images/bali.jpg" alt="Plage de Bali">
+      <h3>Bali, Indonésie</h3>
+      <p>Plages paradisiaques, temples et rizières luxuriantes.</p>
+    </article>
+    <article class="destination">
+      <img src="images/rome.jpg" alt="Colisée de Rome">
+      <h3>Rome, Italie</h3>
+      <p>Un voyage au cœur de l’histoire et de la gastronomie.</p>
+    </article>
+    <article class="destination">
+      <img src="images/marrakech.jpg" alt="Souks de Marrakech">
+      <h3>Marrakech, Maroc</h3>
+      <p>Marchés colorés, médina animée et montagnes de l’Atlas.</p>
+    </article>
+  </div>
+</section>
+
   <section class="galerie">
-  <h2 class="galerie__titre">Destinations en vedette</h2>
+  <h2>Destinations en vedette</h2>
   <div class="galerie__grille">
 
     <figure class="galerie__item">
@@ -115,10 +138,14 @@
      <section class="menu">
       <nav class="pieddepage__menu">
       <ul class="pieddepage__liste">
-        <li><a href="#" class="pieddepage__lien">Accueil</a></li>
-        <li><a href="#" class="pieddepage__lien">Destinations</a></li>
-        <li><a href="#" class="pieddepage__lien">Offres</a></li>
-        <li><a href="#" class="pieddepage__lien">Contact</a></li>
+       
+        <li class="entete__item"><a href="#" class="entete__lien">Aventure</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Culturel</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Zen</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Sport</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Croisieres</a></li>
+        <li class="entete__item"><a href="#" class="entete__lien">Repos</a></li>
+      
       </ul>
     </nav>
      </section>
@@ -144,7 +171,7 @@
     <section class="infos">
       <div class="pieddepage__infos">
       <p>&copy; <?php echo date('Y'); ?> Club Voyage. Tous droits réservés.</p>
-      <p>Fait avec ❤️ au Collège Maisonneuve</p>
+      <p>Fait au Collège Maisonneuve</p>
     </div>
 
     </section>
