@@ -1,16 +1,17 @@
 <?php
+
 /**
  * Template-part carte.php
  * Affiche une carte dans un conteneur flex
  */
-
-// Sécurise l'URL et échappe correctement les attributs HTML
-$lien = '<a href="' . esc_url(get_permalink()) . '">Suite</a>';
+$lien = "<a href=" . get_permalink() . ">Suite</a>";
 ?>
 <article class="conteneur__carte">
-    <?php the_post_thumbnail('miniature'); ?>
+    <?php the_post_thumbnail('thumbnail'); ?>
     <h2><?php the_title(); ?></h2>
-    <p>
-        <?php echo wp_kses_post(wp_trim_words(get_the_excerpt(), 10, '... ' . $lien)); ?>
-    </p>
+    <p><?= wp_trim_words(get_the_excerpt(), 10, $lien); ?></p>
+    <p>Température minimum: <?php the_field('temperature_minimum'); ?>&deg;C</p>
+    <p>Température maximum: <?php the_field('temperature_maximum'); ?>&deg;C</p>
+    <p>Température moyenne: <?php the_field('temperature_moyenne'); ?>&deg;C</p>
+    <?php the_category(); ?>
 </article>

@@ -10,7 +10,10 @@
     flex-direction: column;
   }
 }
-
+.custom-logo {
+  width: 75px;
+  height: 75px;
+}
 .entete {
   background-color: blanchedalmond;
   &__contenu {
@@ -36,7 +39,7 @@
     @media screen and (max-width: $point-rupture) {
       display: block;
       position: absolute;
-      top: 0;
+      top: 60px;
       right: 0;
     }
   }

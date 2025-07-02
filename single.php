@@ -23,6 +23,7 @@
   <?php
       /* cette fontion permet d'afficher l'ensemble du contenu (même les images) du post (article ou page)*/
       the_content();
+      edit_post_link();
     }
   } ?>
 </section>

@@ -2,8 +2,8 @@
 /*
 Theme Name: thème-33w-été25
 Theme URI: https://referenced.ca
-Author: Eddy Martin
-Author URI: https://github.com/eddytuto
+Author: Nadia Ouafi
+Author URI: https://github.com/nadiaouafi
 Description: Thème de base développer dans le cadre du cours de Worpress
 Version: 1.0
 Tested up to: 6.2
@@ -13,7 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: club-voyage
 */
 /* Importation des  feuilles de style du thème */
-/* variables */
+/* ============================================   variables */
 /* Base */
 /* Layout */
 html {
@@ -26,7 +26,6 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
@@ -36,16 +35,32 @@ body {
 }
 
 .global {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 /* ///////////////////////////// Layout .entete */
+.chk__menu {
+  display: none;
+}
+
+.chk__menu:checked ~ .entete__nav {
+  display: flex;
+  flex-direction: column;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu {
+  flex-direction: column;
+}
+
+.custom-logo {
+  width: 75px;
+  height: 75px;
+}
+
 .entete {
-  background-color: rgb(245, 243, 241);
+  background-color: blanchedalmond;
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
@@ -53,18 +68,35 @@ body {
   justify-content: space-between;
 }
 .entete__logo {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
 }
 .entete__nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0 2rem 0 auto;
-
+}
+@media screen and (max-width: 600px) {
+  .entete__nav {
+    display: none;
+  }
+}
+.entete__burger {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .entete__burger {
+    display: block;
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
 }
 .entete__menu {
   display: flex;
   list-style-type: none;
   gap: 1rem;
-
 }
 .entete__menu-item a {
   display: block;
@@ -75,7 +107,6 @@ body {
 }
 
 .hero {
-  background-image: url("images/acores.jpg");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -83,51 +114,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-}
-
-
-.hero {
-
-  padding: 4rem 2rem;
-  text-align: center;
-
-
-  &__contenu {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  &__titre {
-    font-size: 1.5rem;
-   margin-bottom: 1rem;
-  }
-
-  &__texte {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  &__coordonnees {
-    font-size: 5rem;
-    margin-bottom: 2rem;
-  }
-
-  &__bouton {
-    
-    color: rgb(14, 13, 13);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 5rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #e64a19;
-    }
-  }
 }
 /* ////////////////////////////////  composants */
 /**
@@ -144,5 +130,21 @@ body {
 }
 .recherche__bouton {
   border-left: 1px solid #aaa;
-}/*# sourceMappingURL=style.css.map */
+}
 
+.conteneur {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.conteneur__carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 0 300px;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+.conteneur__galerie {
+  flex: 1 0 100%;
+}/*# sourceMappingURL=style.css.map */
