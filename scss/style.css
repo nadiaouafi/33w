@@ -1,5 +1,5 @@
 .entete {
-  background-color: #005295; /* bleu foncé */
+  background-color: #faf9bc; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .entete__lien:hover {
-  color: #ffd700; /* jaune doré au survol */
+  color: #ffd700; 
 }
 
 .hero {
