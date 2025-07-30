@@ -56,8 +56,12 @@
       display: block;
       background-color: beige;
       &:hover {
-        background-color: rgb(233, 227, 177);
+        background-color: rgb(48, 78, 248);
       }
     }
   }
+}
+
+.current-menu-item a {
+  color: red;
 }

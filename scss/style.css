@@ -1,5 +1,9 @@
 .entete {
+<<<<<<< HEAD
   background-color: #faf9bc; 
+=======
+  background-color: #f7f58e; 
+>>>>>>> 4ef9bb6 (Ajout d'une mise a jour)
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +24,7 @@
 }
 
 .entete__lien {
-  color: #ffffff;
+  color: #2710f0;
   text-decoration: none;
   font-weight: 500;
   font-size: 1.2rem;
@@ -28,16 +32,37 @@
 }
 
 .entete__lien:hover {
+<<<<<<< HEAD
   color: #ffd700; 
+=======
+  color: #816f06; 
+>>>>>>> 4ef9bb6 (Ajout d'une mise a jour)
 }
 
 .hero {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
+  text-align: center;
+  background: #f2f2f2;
 
+  &__contenu {
+    padding: 2rem;
+  }
+
+  &__titre {
+    font-size: 2.5rem;
+    color: #003366;
+  }
+
+  &__texte {
+    font-size: 1.2rem;
+    color: #444;
+  }
+
+  &__sociaux img {
+    width: 24px;
+    margin: 0 8px;
+  }
+}
 .hero img {
   width: 100%;
   height: 100%;
@@ -135,7 +160,9 @@
 }
 
 .grille-destinations {
-  display: flex;
+
+  display: grid;
+
   flex-wrap: wrap;
   justify-content: center;
   gap: 5em;
@@ -289,6 +316,61 @@ h2 {
   color: #faf6f6;
   margin-top: 1rem;
 }
+.pieddepage {
+  background: #0609f1;
+  color: #f5f5f5;
+
+  a {
+    color: #dddddd;
+
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  }
+
+  h4 {
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #aaa;
+  }
+}
+.pieddepage__contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+
+  > section {
+    flex: 1 1 250px;
+  }
+}
+.pieddepage {
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  a {
+    font-weight: 500;
+  }
+
+  .pieddepage__logo img {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .pieddepage__reseaux img {
+    width: 24px;
+    margin-right: 0.5rem;
+  }
+
+  .pieddepage__infos {
+    font-size: 0.8rem;
+    color: #ccc;
+  }
+}
+
 /* Responsive - pile les champs en colonne sur petit écran */
 @media (max-width: 600px) {
   .formulaire-inscription {

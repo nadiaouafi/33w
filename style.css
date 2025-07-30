@@ -55,12 +55,13 @@ body {
 }
 
 .custom-logo {
-  width: 75px;
-  height: 75px;
+  width: 90px;
+  height: 90px;
 }
 
 .entete {
-  background-color: blanchedalmond;
+  background-color: #b3ffff;
+
   /*  /////////////////////// Navigation */
 }
 .entete__contenu {
@@ -103,18 +104,135 @@ body {
   background-color: beige;
 }
 .entete__menu-item a:hover {
-  background-color: rgb(233, 227, 177);
+  background-color: rgb(177, 186, 233);
+}
+
+.current-menu-item a {
+  color: red;
 }
 
 .hero {
-  background-position: center;
-  background-size: cover;
+
+  position: relative;
+
   height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
 }
+.hero__titre {
+  animation: anime-titre 1s 0.5s cubic-bezier(0.08, 0.91, 0.75, 1.54) forwards;
+}
+@keyframes anime-titre {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.carrousel {
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  top: 1em;
+  left: 2rem;
+}
+.carrousel__form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.piedpage {
+  border: 1px solid rgb(238, 235, 235);
+}
+/* Vague animée */
+.vague {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+@keyframes mouvementVague {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.piedpage {
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+
+}
+
+.piedpage__contenu {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.piedpage h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.piedpage__menu .piedpage__liste {
+  list-style: none;
+  padding: 0;
+}
+
+.piedpage__menu .piedpage__liste li a {
+  color: white;
+  text-decoration: none;
+}
+
+.piedpage__menu .piedpage__liste li a:hover {
+  text-decoration: underline;
+}
+
+.piedpage__social img {
+  width: 30px;
+  margin: 5px;
+  transition: transform 0.3s;
+}
+
+.piedpage__social img:hover {
+  transform: scale(1.2);
+}
+
+.piedpage__copyright {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
 /* ////////////////////////////////  composants */
 /**
 /////////////////////////////// Compsant .recherche
@@ -147,4 +265,5 @@ body {
 }
 .conteneur__galerie {
   flex: 1 0 100%;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

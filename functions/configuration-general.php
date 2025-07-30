@@ -40,13 +40,17 @@ function theme_tp_enqueue_styles()
     $script_path = get_template_directory() . '/script/checkbox.js';
     $script_url  = get_template_directory_uri() . '/script/checkbox.js';
 
-    wp_enqueue_script(
-        'mon-script',
-        $script_url,
-        array(),
-        filemtime($script_path),
-        true
-    );
+   
+
+    $script_path = get_template_directory() . '/script/carrousel.js';
+    $script_url  = get_template_directory_uri() . '/script/carrousel.js';
+
+  
+
+    $script_path = get_template_directory() . '/script/destination.js';
+    $script_url  = get_template_directory_uri() . '/script/destination.js';
+
+  
 }
 add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
 
@@ -56,7 +60,6 @@ add_action('wp_enqueue_scripts', 'theme_tp_enqueue_styles');
  * le hook « pre_get_posts » se manifeste juste avant d'exécuter la requête principal
  * Dépendant de la condition initiale on peut filtrer un type particulier de requête
  * Dans ce cas ci nous filtrons la requête de la page d'accueil
- * @param WP_query  $query la requête principal de WP
  */
 function modifie_requete_principal($query)
 {
