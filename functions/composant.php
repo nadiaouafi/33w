@@ -87,7 +87,11 @@ function register_extra_menu() {
 }
 add_action('after_setup_theme', 'register_extra_menu');
 
-
+// Créer un menu 404
+function register_404_menu() {
+    register_nav_menu('menu-404', __('Menu 404', 'club-voyage'));
+}
+add_action('after_setup_theme', 'register_404_menu');
 
 // Menu 404
 function theme_customize_register($wp_customize) {
@@ -123,7 +127,23 @@ function theme_customize_register($wp_customize) {
         'settings' => 'section_404[message]'
     ]);
 
-    // Texte du bouton
+    // Couleur bouton
+    $wp_customize->add_setting('section_404[btn_color]', ['default' => '#007acc']);
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'section_404_btn_color', [
+        'label' => __('Couleur bouton', 'club-voyage'),
+        'section' => 'section_404',
+        'settings' => 'section_404[btn_color]'
+    ]));
+
+    // Couleur zone de recherche
+    $wp_customize->add_setting('section_404[search_bg]', ['default' => '#fff']);
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'section_404_search_bg', [
+        'label' => __('Fond zone de recherche', 'club-voyage'),
+        'section' => 'section_404',
+        'settings' => 'section_404[search_bg]'
+    ]));
+
+    // Texte bouton
     $wp_customize->add_setting('section_404[btn_text]', ['default' => 'Retour à l’accueil']);
     $wp_customize->add_control('section_404_btn_text', [
         'label' => __('Texte du bouton', 'club-voyage'),
