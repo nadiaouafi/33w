@@ -368,6 +368,55 @@ h2 {
   }
 }
 
+
+.newsletter-section {
+  background: #f0f7fa;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 600px;
+
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #007acc;
+  }
+
+  &__success {
+    color: green;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    input {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 0.8rem;
+      font-size: 1rem;
+      background: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #005f99;
+      }
+    }
+  }
+}
+
 .pieddepage {
   background-color: #83eece;
   padding: 2rem;

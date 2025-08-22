@@ -79,4 +79,30 @@
     </div>
 </section>
 
+<section class="newsletter-section">
+    <h2 class="newsletter-section__title">Inscrivez-vous à notre infolettre</h2>
+
+    <?php
+    // Traitement du formulaire
+    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['newsletter_submit'])) {
+        $nom = sanitize_text_field($_POST['nom']);
+        $prenom = sanitize_text_field($_POST['prenom']);
+        $email = sanitize_email($_POST['email']);
+
+        // Exemple : envoyer un email à l'admin (ou sauvegarder dans la base)
+        wp_mail(get_bloginfo('admin_email'), 'Nouvelle inscription', "Nom : $nom\nPrénom : $prenom\nEmail : $email");
+
+        echo '<p class="newsletter-section__success">Merci pour votre inscription !</p>';
+    }
+    ?>
+
+    <form class="newsletter-form" method="post">
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="text" name="prenom" placeholder="Prénom" required>
+        <input type="email" name="email" placeholder="Courriel" required>
+        <button type="submit" name="newsletter_submit">S’inscrire</button>
+    </form>
+</section>
+
+
 <?php get_footer();

@@ -41,6 +41,9 @@
         }
         ?>
     </div>
+
+
+
     <div class="destination__content"><?php the_content(); ?></div>
     <div class="destination__info">
         <span>Température max : <?php echo get_post_meta(get_the_ID(), 'temperature', true); ?>°C</span>
