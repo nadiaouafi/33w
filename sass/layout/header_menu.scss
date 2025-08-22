@@ -1,0 +1,24 @@
+.erreur-404__menu {
+  margin-bottom: 1.5rem;
+
+  & .erreur-404__liste {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+
+    li a {
+      text-decoration: none;
+      color: #007acc;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      background-color: rgba(0, 122, 204, 0.1);
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: #007acc;
+        color: #fff;
+      }
+    }
+  }
+}

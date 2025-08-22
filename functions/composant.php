@@ -88,3 +88,47 @@ function register_extra_menu() {
 add_action('after_setup_theme', 'register_extra_menu');
 
 
+
+// Menu 404
+function theme_customize_register($wp_customize) {
+    // Section pour la page 404
+    $wp_customize->add_section('section_404', [
+        'title' => __('Page 404', 'club-voyage'),
+        'priority' => 30
+    ]);
+
+    // Image de fond
+    $wp_customize->add_setting('section_404[image]', [
+        'default' => get_template_directory_uri() . '/assets/img/404-default.jpg'
+    ]);
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'section_404_image', [
+        'label' => __('Image de fond', 'club-voyage'),
+        'section' => 'section_404',
+        'settings' => 'section_404[image]'
+    ]));
+
+    // Titre
+    $wp_customize->add_setting('section_404[titre]', ['default' => 'Oups ! Page introuvable']);
+    $wp_customize->add_control('section_404_titre', [
+        'label' => __('Titre', 'club-voyage'),
+        'section' => 'section_404',
+        'settings' => 'section_404[titre]'
+    ]);
+
+    // Message
+    $wp_customize->add_setting('section_404[message]', ['default' => 'La page que vous cherchez n’existe pas.']);
+    $wp_customize->add_control('section_404_message', [
+        'label' => __('Message', 'club-voyage'),
+        'section' => 'section_404',
+        'settings' => 'section_404[message]'
+    ]);
+
+    // Texte du bouton
+    $wp_customize->add_setting('section_404[btn_text]', ['default' => 'Retour à l’accueil']);
+    $wp_customize->add_control('section_404_btn_text', [
+        'label' => __('Texte du bouton', 'club-voyage'),
+        'section' => 'section_404',
+        'settings' => 'section_404[btn_text]'
+    ]);
+}
+add_action('customize_register', 'theme_customize_register');
