@@ -24,27 +24,42 @@
   <input type="tel" class="formulaire-inscription__champ" placeholder="Téléphone">
   <button class="formulaire-inscription__bouton">S'INSCRIRE</button>
 </section>
+<section class="destinations">
+  <h2 class="destinations__titre">Articles de la catégorie</h2>
+  <div class="destinations__list grille-destinations">
 
-<section class="destinations-populaires">
-  <h2>Destinations populaires</h2>
-  <div class="grille-destinations">
-    <article class="destination">
-      <img src="images/bali.jpg" alt="Plage paradisiaque de Bali">
-      <h3>Bali, Indonésie</h3>
-      <p>Plages paradisiaques, temples et rizières luxuriantes.</p>
-    </article>
-    <article class="destination">
-      <img src="images/rome.jpg" alt="Colisée de Rome">
-      <h3>Rome, Italie</h3>
-      <p>Un voyage au cœur de l’histoire et de la gastronomie.</p>
-    </article>
-    <article class="destination">
-      <img src="images/marrakech.jpg" alt="Souks de Marrakech">
-      <h3>Marrakech, Maroc</h3>
-      <p>Marchés colorés, médina animée et montagnes de l’Atlas.</p>
-    </article>
+    <?php
+    // Récupérer les articles de la catégorie "destinations"
+    $args = array(
+      'category_name'  => 'destinations', // slug de ta catégorie
+      'posts_per_page' => 6               // nombre d’articles à afficher
+    );
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+      while ($query->have_posts()) : $query->the_post(); ?>
+        
+        <article class="destinations__item">
+          <?php if (has_post_thumbnail()) : ?>
+            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>">
+          <?php else : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/images/default.jpg" alt="Image par défaut">
+          <?php endif; ?>
+
+          <h3><?php the_title(); ?></h3>
+          <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>
+          <a href="<?php the_permalink(); ?>" class="destinations__lien">Voir plus</a>
+        </article>
+
+      <?php endwhile;
+      wp_reset_postdata();
+    else : ?>
+      <p>Aucune destination trouvée.</p>
+    <?php endif; ?>
+
   </div>
 </section>
+
 
 <section class="galerie">
   <?php if ( have_posts() ) : 

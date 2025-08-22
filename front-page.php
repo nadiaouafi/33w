@@ -38,34 +38,38 @@
   <?php get_template_part("gabarit/populaire"); ?>
 </section>
 
-<section class="destination">
-  <h2 class="destination__titre">Articles de la catégorie</h2>
-  <div class="destination__list">
-      <div class="grille-destinations">
-    <article class="destination">
-      <img src="33w/images/bali.jpg" alt="Plage paradisiaque de Bali">
+<section class="destinations">
+  <h2 class="destinations__titre">Articles de la catégorie</h2>
+  <div class="destinations__list grille-destinations">
+    
+    <article class="destinations__item">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/bali.jpg" alt="Plage paradisiaque de Bali">
       <h3>Bali, Indonésie</h3>
       <p>Plages paradisiaques, temples et rizières luxuriantes.</p>
     </article>
-    <article class="destination">
-      <img src="images/rome.jpg" alt="Colisée de Rome">
+
+    <article class="destinations__item">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/rome.jpg" alt="Colisée de Rome">
       <h3>Rome, Italie</h3>
       <p>Un voyage au cœur de l’histoire et de la gastronomie.</p>
     </article>
-    <article class="destination">
-      <img src="images/marrakech.jpg" alt="Souks de Marrakech">
+
+    <article class="destinations__item">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/marrakech.jpg" alt="Souks de Marrakech">
       <h3>Marrakech, Maroc</h3>
-      <p>Marchés colorés, médina animée et montagnes de l’Atlas.</p>
+      <p>Souks colorés, palais et jardins magnifiques.</p>
     </article>
-  </div>
+
   </div>
 </section>
+
 
 <!-- section rest-api -->
 <section class="destination">
  
   <h2 class="destination__titre">Articles de la catégorie</h2>
   <div class="destination__list"></div>
+  <?php carte('populaire'); ?>
 </section>
 
 
