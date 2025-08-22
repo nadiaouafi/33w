@@ -82,3 +82,9 @@ function carte($cat_a_retirer) {
 
 
 
+function register_extra_menu() {
+    register_nav_menu('extra-menu', __('Extra Menu', 'club-voyage'));
+}
+add_action('after_setup_theme', 'register_extra_menu');
+
+

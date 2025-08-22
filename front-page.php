@@ -8,10 +8,7 @@
 <?php get_header() ?>
 <!-- section hero -->
 
-
-  
-</section>
-
+<?php get_template_part('template-parts/header', 'extra'); ?>
 
 
 <section class="hero">
