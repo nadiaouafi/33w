@@ -57,7 +57,7 @@ function carte($cat_a_retirer = '') {
                 <?php if (has_post_thumbnail()) : ?>
                     <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>">
                 <?php else : ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/default.jpg" alt="Image par défaut">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/bali.jpg" alt="Image par défaut">
                 <?php endif; ?>
                 <h3><?php the_title(); ?></h3>
                 <p><?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?></p>

@@ -38,30 +38,6 @@
   <?php get_template_part("gabarit/populaire"); ?>
 </section>
 
-<section class="destinations">
-  <h2 class="destinations__titre">Articles de la catégorie</h2>
-  <div class="destinations__list grille-destinations">
-    
-    <article class="destinations__item">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/bali.jpg" alt="Plage paradisiaque de Bali">
-      <h3>Bali, Indonésie</h3>
-      <p>Plages paradisiaques, temples et rizières luxuriantes.</p>
-    </article>
-
-    <article class="destinations__item">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/rome.jpg" alt="Colisée de Rome">
-      <h3>Rome, Italie</h3>
-      <p>Un voyage au cœur de l’histoire et de la gastronomie.</p>
-    </article>
-
-    <article class="destinations__item">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/marrakech.jpg" alt="Souks de Marrakech">
-      <h3>Marrakech, Maroc</h3>
-      <p>Souks colorés, palais et jardins magnifiques.</p>
-    </article>
-
-  </div>
-</section>
 
 
 <!-- section rest-api -->

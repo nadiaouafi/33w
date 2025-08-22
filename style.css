@@ -211,6 +211,21 @@ body {
 }
 
 
+.destination__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .destination__card {
+        width: calc(33.333% - 1rem);
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+}
+
+
 /* Conteneur */
 .piedpage__social {
   display: flex;
