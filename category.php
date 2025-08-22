@@ -23,6 +23,14 @@
     }
   } ?>
 </section>
+
+<section class="destination">
+    <h2 class="destination__titre">Articles de la catégorie</h2>
+    <div class="destination__grid">
+        <?php carte('populaire'); ?>
+    </div>
+</section>
+
 <?php get_footer();?>
 
 <?php get_header(); ?>

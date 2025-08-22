@@ -296,6 +296,73 @@ body {
 }
 
 
+.accordion-section {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 1.5rem;
+  }
+
+  .accordion__item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .accordion__button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1rem;
+      background: #f5f5f5;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #e0f7fa;
+      }
+
+      &::after {
+        content: "\25BC";
+        transition: transform 0.3s ease;
+      }
+
+      &.active::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .accordion__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1rem 1rem 1rem;
+
+      img.accordion__image {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+
 /* Conteneur */
 .piedpage__social {
   display: flex;
