@@ -20,3 +20,35 @@
 
   &__btn, &__search { border-radius: 5px; padding: 0.5rem 1rem; color: #fff; text-decoration: none; transition: 0.3s; }
 }
+.erreur-404 {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: url('../img/erreur-404.jpg') no-repeat center/cover;
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-inline: auto;
+    line-height: 1.6;
+  }
+
+  &__btn {
+    background-color: var(--couleur-bouton, #ff6600);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: darken(var(--couleur-bouton, #ff6600), 10%);
+    }
+  }
+}
