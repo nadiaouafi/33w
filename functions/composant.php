@@ -14,6 +14,13 @@ function icone_sociaux($couleur)
     <a class="sociaux" href="https://facebook.com">
         <img src="https://s2.svgbox.net/social.svg?ic=facebook&color=<?= $couleur ?>" width="32" height="32">
     </a>
+    <a class="sociaux" href="https://instagram.com">
+    <img src="https://s2.svgbox.net/social.svg?ic=instagram&color=<?= $couleur ?>" width="32" height="32" alt="Instagram">
+</a>
+
+<a class="sociaux" href="https://twitter.com">
+    <img src="https://s2.svgbox.net/social.svg?ic=twitter&color=<?= $couleur ?>" width="32" height="32" alt="Twitter">
+</a>
     <?php
 }
 
@@ -24,7 +31,7 @@ function vague($couleur1) {
     echo '
     <div class="vague">
         <svg viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
-            <path fill="'.$couleur1. $couleur2.'">
+            <path fill="'.$couleur1.'">
                 <animate attributeName="d" dur="10s" repeatCount="indefinite"
                     values="
                         M0,40 C360,120 1080,-40 1440,40 L1440,0 L0,0 Z;
@@ -35,3 +42,6 @@ function vague($couleur1) {
         </svg>
     </div>';
 }
+
+
+

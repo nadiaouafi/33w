@@ -1,9 +1,7 @@
 .entete {
-<<<<<<< HEAD
-  background-color: #faf9bc; 
-=======
-  background-color: #f7f58e; 
->>>>>>> 4ef9bb6 (Ajout d'une mise a jour)
+
+ background-color: #5ac8e4; 
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,11 +30,8 @@
 }
 
 .entete__lien:hover {
-<<<<<<< HEAD
-  color: #ffd700; 
-=======
   color: #816f06; 
->>>>>>> 4ef9bb6 (Ajout d'une mise a jour)
+
 }
 
 .hero {

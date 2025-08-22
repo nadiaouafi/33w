@@ -9,7 +9,7 @@
 <?php
 
 $hero_couleur = get_theme_mod('hero_couleur');
-$hero_auteur = get_theme_mod('hero_auteur', 'Gustave Trotier');
+$hero_auteur = get_theme_mod('hero_auteur', 'NADIA OUAFI');
 $hero_adresse = get_theme_mod('hero_adresse', '356 Hamel');
 ?>
 <style>
