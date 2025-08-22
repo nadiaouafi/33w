@@ -70,6 +70,23 @@ function carte($cat_a_retirer = '') {
         echo "<p>Aucune destination trouvée.</p>";
     endif;
 }
+ add_action('rest_api_init', function () {
+    register_rest_route('destinations/v1', '/all', [
+        'methods' => 'GET',
+        'callback' => function() {
+            $posts = get_posts(['post_type' => 'destination', 'numberposts' => -1]);
+            $data = [];
+            foreach($posts as $post){
+                $data[] = [
+                    'title' => $post->post_title,
+                    'content' => $post->post_content,
+                    'link' => get_permalink($post)
+                ];
+            }
+            return $data;
+        }
+    ]);
+});
 
 
 

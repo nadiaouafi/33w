@@ -137,3 +137,9 @@ function hero_carrousel_customizer($wp_customize) {
     }
 }
 add_action('customize_register', 'hero_carrousel_customizer');
+
+
+function enqueue_custom_scripts() {
+    wp_enqueue_script('accordion-js', get_template_directory_uri() . '/assets/js/accordion.js', array(), '1.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');

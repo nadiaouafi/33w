@@ -72,5 +72,11 @@
   <?php carte('populaire'); ?>
 </section>
 
+<section class="accordion-section">
+    <h2 class="accordion-section__title">Nos destinations</h2>
+    <div id="accordion" class="accordion">
+        <!-- Les éléments seront ajoutés dynamiquement via JS -->
+    </div>
+</section>
 
 <?php get_footer();

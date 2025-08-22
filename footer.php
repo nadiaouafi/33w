@@ -68,6 +68,10 @@
     </div>
 
   </div>
+
+  <?php if($img = get_theme_mod('footer_image')): ?>
+    <img src="<?php echo esc_url($img); ?>" alt="Footer image">
+<?php endif; ?>
 </footer>
 <?php wp_footer(); ?>
 </body>

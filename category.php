@@ -38,7 +38,7 @@
     <?php endwhile; endif; ?>
   </div>
   <?php carte('populaire'); ?>
-
+<?php carte(0); ?>
 </main>
 
 <?php get_footer(); ?>

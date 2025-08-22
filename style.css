@@ -152,6 +152,16 @@ body {
   }
 }
 
+.carte__link {
+  display: block;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+  }
+}
+
+
 /* Conteneur */
 .piedpage__social {
   display: flex;
@@ -253,6 +263,7 @@ body {
 }
 
 .piedpage__copyright {
+ justify-content: center;
   margin-top: 30px;
   font-size: 0.9rem;
   opacity: 0.8;
